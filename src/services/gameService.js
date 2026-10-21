@@ -1,14 +1,5 @@
-const games = require('../data/games');
+import games from '../data/games.js'; // ¡La extensión .js es obligatoria en ESM!
 
-const getAllGames = () => {
-  return games;
-};
+export const getAllGames = () => games;
 
-const getGameById = (id) => {
-  return games.find(game => game.id === parseInt(id));
-};
-
-module.exports = {
-  getAllGames,
-  getGameById
-}; 
+export const getGameById = (id) => games.find(game => game.id === parseInt(id));
